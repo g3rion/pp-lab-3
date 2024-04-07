@@ -1,10 +1,14 @@
+import geometry.Point;
+import geometry.Circle;
+
 public class main {
     public static void main(String[] args) {
-        Point point = new Point(10, 12);
+        Point center = new Point(0, 0);
 
-        point.setX(10);
-        point.setY(12);
+        Circle circle = new Circle(center, 8);
 
-        System.out.println("Współrzędne: (" + point.getX() + ", " + point.getY() + ")");
+        System.out.println("Centrum koła: (" + circle.getCenter().getX() + ", " + circle.getCenter().getY() + ")");
+        System.out.println("Promień koła: " + circle.getRadius());
+        System.out.println("Obwód koła: " + circle.calculatePerimeter());
     }
 }
