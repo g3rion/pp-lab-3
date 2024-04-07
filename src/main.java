@@ -1,12 +1,10 @@
-import geometry.rectangle;
+import geometry.Square;
 
 public class main {
     public static void main(String[] args) {
-        // Tworzenie obiektu Rectangle z określoną długością i szerokością
-        rectangle rectangle = new rectangle(5.0, 3.0);
+        Square square = new Square(6.0); // Kwadrat o boku długości 4.0
 
-        // Wyświetlanie właściwości prostokąta
-        System.out.println("Pole prostokąta: " + rectangle.calculateArea());
-        System.out.println("Obwód prostokąta: " + rectangle.calculatePerimeter());
+        System.out.println("Pole kwadratu: " + square.calculateArea());
+        System.out.println("Obwód kwadratu: " + square.calculatePerimeter());
     }
 }
