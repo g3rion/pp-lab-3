@@ -1,22 +1,12 @@
-import geometry.Point;
-import geometry.Circle;
-import geometry.ColoredCircle;
+import geometry.rectangle;
 
 public class main {
     public static void main(String[] args) {
-        Circle[] circles = new Circle[4];
+        // Tworzenie obiektu Rectangle z określoną długością i szerokością
+        rectangle rectangle = new rectangle(5.0, 3.0);
 
-        circles[0] = new Circle(new Point(1, 6), 4);
-        circles[1] = new ColoredCircle(new Point(7, 3), 7, "żółty");
-        circles[2] = new Circle(new Point(3, 8), 3);
-        circles[3] = new ColoredCircle(new Point(2, 9), 8, "szary");
-        for (Circle circle : circles) {
-            System.out.println("Obszar koła wynosi: " + circle.calculateArea());
-
-            if (circle instanceof ColoredCircle) {
-                ColoredCircle coloredCircle = (ColoredCircle) circle;
-                System.out.println("Kolor koła to: " + coloredCircle.getColor());
-            }
-        }
+        // Wyświetlanie właściwości prostokąta
+        System.out.println("Pole prostokąta: " + rectangle.calculateArea());
+        System.out.println("Obwód prostokąta: " + rectangle.calculatePerimeter());
     }
 }
